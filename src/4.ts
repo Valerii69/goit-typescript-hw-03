@@ -21,11 +21,9 @@ class Person {
 
 abstract  class House  {
   protected door: boolean = false;
-  protected key: Key;
   protected tenants: typeof person[] = [];
 
-  constructor(key: Key) {
-    this.key = key;
+  constructor(protected key: Key) {
 
 }
 abstract openDoor(key: Key): void;
